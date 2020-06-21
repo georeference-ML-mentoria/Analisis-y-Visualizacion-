@@ -32,12 +32,12 @@ Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 The first step in establishing a predictive relationship is identifying correlation between variables and next defining the independent variable, and dependent variables in those correlations. 
 
-x= 'CONJ', y='FIC' or "DIC" 
-x= 'ARE_LOC', y='FIC' or "DIC"
-x= 'GRU_TAR', y='FIC' or "DIC"
-x= 'DIC', y='FIC' or "DIC"
-x= 'ENE_01', y='FIC' or "DIC"
-x= 'CAR_INST', y='FIC' or "DIC"
+x= 'CONJ', y='FIC' or "DIC" <br>
+x= 'ARE_LOC', y='FIC' or "DIC"<br>
+x= 'GRU_TAR', y='FIC' or "DIC"<br>
+x= 'DIC', y='FIC' or "DIC"<br>
+x= 'ENE_01', y='FIC' or "DIC"<br>
+x= 'CAR_INST', y='FIC' or "DIC"<br>
 
 We identified 18 variables that could be considered independent ("entrada" o "X") en nuestro correlacion, pero solamente que mostraron correlacion notable. 
 There exists a positive correlation between DIC and FIC, but that doesn't help us much since those are both our supposed salidas. 
@@ -47,8 +47,12 @@ There exists a positive correlation between DIC and FIC, but that doesn't help u
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
+
+
 ![conditional distribution table of rate groups](images/table_cond_distribution.png "conditional distribution of rate groups")
 ![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
+
+
 Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
 
 
