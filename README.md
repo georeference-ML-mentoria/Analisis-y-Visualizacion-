@@ -31,6 +31,7 @@ Escoja 2 variables y grafique sus niveles contra la cantidad de apariciones. <br
 Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 The first step in establishing a predictive relationship is identifying correlation between variables and next defining the independent variable, and dependent variables in those correlations. 
+
 x= 'CONJ', y='FIC' or "DIC" 
 x= 'ARE_LOC', y='FIC' or "DIC"
 x= 'GRU_TAR', y='FIC' or "DIC"
@@ -45,6 +46,11 @@ There exists a positive correlation between DIC and FIC, but that doesn't help u
 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
+Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
+![conditional distribution table of rate groups](images/table_cond_distribution.png "conditional distribution of rate groups")
+![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
+Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
+
 
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
