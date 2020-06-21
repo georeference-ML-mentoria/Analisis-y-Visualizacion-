@@ -22,11 +22,46 @@ Como es la distribucion de los valores? Son normales? <br>
 Calcule los principales estadisticos despues del preprocesamiento. <br>
 Adicione los graficos o tablas que considere oportuno para graficar los puntos anteriores. <br>
 
-Javier <br>
-Cuales son las variables categoricas? Cual es la cardinalidad de las mismas? <br>
-En base a la respuesta anterior vale la manera mantenerlas a todas? <br>
-Cuales son los 3 valores mas comunes de cada categoria? <br>
-Escoja 2 variables y grafique sus niveles contra la cantidad de apariciones. <br>
+**Cuáles son las variables categóricas? Cuál es la cardinalidad de las mismas?**
+
+* CONJ, que si bien es numérica es sólo un código; su orden numérico no nos es útil. Su cardinalidad es de 6.
+* BRR, con cardinalidad 706.
+* CLAS_SUB, con cardinalidad 28.
+* CNAE, con cardinalidad 142.
+* FAS_CON, con cardinalidad 9.
+* GRU_TEN, con cardinalidad 1.
+* TEN_FORN, con cardinalidad 1.
+* GRU_TAR, con cardinalidad 6.
+* ARE_LOC, con cardinalidad 3.
+* SIT_ATIV, con cardinalidad 2.
+
+Con respecto a PAC: su cardinalidad es 145433. Este es un número muy alto, cercano al cardinal del conjunto de datos. La razón es que suele haber sólo un punto de acoplamiento para cada unidad consumidora. Por esta razón, me parece que no debería considerarse variable categórica; si fuese así la gran mayoría de las categorías tendría un solo elemento.
+
+A pesar de que DAT_CON no es numérica no puedo considerarla categórica ya que contiene pares fecha-hora, los cuales pueden resultarnos útiles si están ordenados.
+
+**En base a la respuesta anterior, ¿vale la manera mantenerlas a todas?**
+
+Creo que GRUN_TEN y TEN_FORN no valen la pena, ya que todas las unidades pertenecen al mismo grupo de tensión (BT, "Baja Tensión") y tienen el mismo código de tensión de suministro (22).
+
+**Cuáles son los 3 valores más comunes de cada categoría?**
+
+| Variable | Valor más común              | Segundo valor más común             | Tercer valor más común       |
+| -------- | ---------------------------- | ----------------------------------- | ---------------------------- |
+| CONJ     | 15602 (42090 consumidores)   | 12737 (32909 consumidores)          | 12743 (28465 consumidores)   |
+| MUN      | 2802106 (30785 consumidores) | 2807402 (22570 consumidores)        | 2803005 (16067 consumidores) |
+| BRR      | CENTRO (20614 consumidores)  | TOBIAS BARRETO (10151 consumidores) | RIO REAL (9913 consumidores) |
+| CLAS_SUB | RE1 (99475 consumidores)     | RE2 (31682 consumidores)            | CO1 (6860 consumidores)      |
+| CNAE     | 0 (148046 consumidores)      | 6190601 (101 consumidores)          | 9491000 (57 consumidores)    |
+| FAS_CON  | AN (96082 consumidores)      | BN (21575 consumidores)             | CN (12284 consumidores)      |
+| GRU_TEN  | BT (148801 consumidores)     |                                     |                              |
+| TEN_FORN | 22 (148801 consumidores)     |                                     |                              |
+| GRU_TAR  | B1 (130596 consumidores)     | B3 (12297 consumidores)             | B2RU (5001 consumidores)     |
+| ARE_LOC  | UB (87973 consumidores)      | NU (60790 consumidores)             | 0 (38 consumidores)          |
+| SIT_ATIV | AT (145609 consumidores)     | DS (3192 consumidores)              |                              |
+
+**Escoja dos variables y grafique sus niveles contra la cantidad de apariciones.**
+
+TO-DO Javi
 
 Brandon <br>
 Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables. <br>
