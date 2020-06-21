@@ -29,10 +29,24 @@ Cuales son los 3 valores mas comunes de cada categoria? <br>
 Escoja 2 variables y grafique sus niveles contra la cantidad de apariciones. <br>
 
 Brandon <br>
-Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables. <br>
-Cual es la variable de mayor correlacion con la salida. <br>
-Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma. <br>
-Como podemos saber si las distribuciones condicionales son diferentes entre ellas? <br>
+**Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
+The first step in establishing a predictive relationship is identifying correlation between variables and next defining the independent variable, and dependent variables in those correlations. 
+x= 'CONJ', y='FIC' or "DIC" 
+x= 'ARE_LOC', y='FIC' or "DIC"
+x= 'GRU_TAR', y='FIC' or "DIC"
+x= 'DIC', y='FIC' or "DIC"
+x= 'ENE_01', y='FIC' or "DIC"
+x= 'CAR_INST', y='FIC' or "DIC"
+
+We identified 18 variables that could be considered independent ("entrada" o "X") en nuestro correlacion, pero solamente que mostraron correlacion notable. 
+There exists a positive correlation between DIC and FIC, but that doesn't help us much since those are both our supposed salidas. 
+
+**Cual es la variable de mayor correlacion con la salida.** <br>
+
+
+**Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
+
+**Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
 3 - Preguntas <br>
 
