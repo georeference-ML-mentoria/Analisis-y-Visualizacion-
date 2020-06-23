@@ -82,6 +82,8 @@ Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC,
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
+
+
 | GRU_TAR | Conditional Distribution|
 |----|------|
 | B1 | 0.878|
@@ -93,12 +95,14 @@ Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en 
 
 
 ![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
+
+
 Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
 
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
 3 - Preguntas <br>
-
+ 
 Brandon <br>
 Calcule el consumo total anual de cada consumidor. <br>
 Existe correlacion entre consumo y frecuencia de corte de servicio (FIC)? <br>
