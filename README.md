@@ -104,11 +104,25 @@ Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
 3 - Preguntas <br>
- 
-Brandon <br>
-Calcule el consumo total anual de cada consumidor. <br>
+
+Con un simple "for loop" se puede calcular el consumo total anual de cada consumidor.<br>
+```
+annual_totals = []
+for index, row in data.iterrows():
+    annual_total = row.ENE_01+row.ENE_02+ \
+     row.ENE_03+row.ENE_04+row.ENE_05+ \
+    row.ENE_06+row.ENE_07+row.ENE_08+ \
+    row.ENE_09+row.ENE_10+row.ENE_11+ \
+    row.ENE_02
+    annual_totals.append(annual_total)
+print(annual_totals[:10])
+```
+Despues podes agregar la lista ```annual_totals``` a tu dataset como una nueva columna ```data['consumo_anual'] = annual_totals```.<br>
+<br> Por ejemplo, el promedio de consumo por consumidor era ```data.consumo_anual.mean()= 1392.671```kWh, maximum ```data.consumo_anual.max()= 7825074.0```, y el desvio estandar ```data.consumo_anual.std()= 27441.344``` .<br>
 Existe correlacion entre consumo y frecuencia de corte de servicio (FIC)? <br>
+Segun a nuestros calculos, hay una correlation ratio de 0.235 entre consumo_anual y FIC.<br>
 Como varia el servicio entre zonas urbanas y rurales? <br>
+
 Como varia el consumo entre zonas urbanas y rurales? <br>
 
 Javier <br>
