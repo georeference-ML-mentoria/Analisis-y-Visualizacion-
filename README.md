@@ -82,9 +82,14 @@ There exists a positive correlation between DIC and FIC, but that doesn't help u
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
-
-
-![conditional distribution table of rate groups](images/table_cond_distribution.png "conditional distribution of rate groups")
+| GRU_TAR | Conditional Distribution|
+| -------- | ------------------------|
+| B1     | 0.878|
+| B3     | 0.083|
+| B1     | 0.034|
+| B1     | 0.006|
+| B1     | 0.000|
+| B1     | 0.000|
 ![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
 
 
