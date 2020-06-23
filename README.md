@@ -68,8 +68,10 @@ Brandon <br>
 
 El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
 Usamos "correlation ratio", un valor entre 0 y 1 que nos da un idea la probabilidad de que un valor numerica puede estar predicho por su valor categorica. En general DIC nos dio resultados como con salida con correlation mas grande.
+
+
 | entrada | salida| correlation ratio|
-| -------- | ------------------------|
+| -------- | -----|------------------|
 |x='CONJ'|y='DIC'|0.212|
 |x='ARE_LOC'|"DIC"|0.427|
 |x='GRU_TAR'|"DIC"|0.101|
