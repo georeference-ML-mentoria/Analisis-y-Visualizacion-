@@ -73,8 +73,8 @@ Usamos "correlation ratio", un valor entre 0 y 1 que nos da un idea la probabili
 | entrada | salida| correlation ratio|
 | -------- | -----|------------------|
 |x='CONJ'|y='DIC'|0.212|
-|x='ARE_LOC'|"DIC"|0.427|
-|x='GRU_TAR'|"DIC"|0.101|
+|x='ARE_LOC'|y="DIC"|0.427|
+|x='GRU_TAR'|y="DIC"|0.101|
 |x='CNAE'|y='DIC'|0.038|
 |x='CAR_INST'|y='DIC'|0.277|
 |x='ENE_01'|y='DIC'|0.15|
