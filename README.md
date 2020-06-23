@@ -65,36 +65,35 @@ TO-DO Javi
 
 Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
-The first step in establishing a predictive relationship is identifying correlation between variables and next defining the independent variable, and dependent variables in those correlations. 
 
-x= 'CONJ', y='FIC' or "DIC" <br>
-x= 'ARE_LOC', y='FIC' or "DIC"<br>
-x= 'GRU_TAR', y='FIC' or "DIC"<br>
-x= 'DIC', y='FIC' or "DIC"<br>
-x= 'ENE_01', y='FIC' or "DIC"<br>
-x= 'CAR_INST', y='FIC' or "DIC"<br>
-
-We identified 18 variables that could be considered independent ("entrada" o "X") en nuestro correlacion, pero solamente que mostraron correlacion notable. 
-There exists a positive correlation between DIC and FIC, but that doesn't help us much since those are both our supposed salidas. 
+El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
+Usamos "correlation ratio", un valor entre 0 y 1 que nos da un idea la probabilidad de que un valor numerica puede estar predicho por su valor categorica. En general DIC nos dio resultados como con salida con correlation mas grande.
+| entrada | salida| correlation ratio|
+| -------- | ------------------------|
+|x='CONJ'|y='DIC'|0.212|
+|x='ARE_LOC'|"DIC"|0.427|
+|x='GRU_TAR'|"DIC"|0.101|
+|x='CNAE'|y='DIC'|0.038|
+|x='CAR_INST'|y='DIC'|0.277|
+|x='ENE_01'|y='DIC'|0.15|
 
 **Cual es la variable de mayor correlacion con la salida.** <br>
-
+Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
 | GRU_TAR | Conditional Distribution|
-| -------- | ------------------------|
-| B1     | 0.878|
-| B3     | 0.083|
-| B1     | 0.034|
-| B1     | 0.006|
-| B1     | 0.000|
-| B1     | 0.000|
+|----|------|
+| B1 | 0.878|
+| B3 | 0.083|
+| B1 | 0.034|
+| B1 | 0.006|
+| B1 | 0.000|
+| B1 | 0.000|
+
+
 ![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
-
-
 Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
-
 
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
