@@ -63,7 +63,7 @@ Creo que GRUN_TEN y TEN_FORN no valen la pena, ya que todas las unidades pertene
 
 Variable BRR (barrios donde se encuentran las unidades consumidoras):
 
-![Gráfico de torta de BRR](images/brr_pie_chart.png)
+![Gráfico de barras de BRR](images/brr_bar_plot.png)
 
 Variable FAS_CON (códigos de referencia de fases de conexión):
 
