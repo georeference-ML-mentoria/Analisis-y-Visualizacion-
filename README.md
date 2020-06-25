@@ -61,13 +61,13 @@ Creo que GRUN_TEN y TEN_FORN no valen la pena, ya que todas las unidades pertene
 
 **Escoja dos variables y grafique sus niveles contra la cantidad de apariciones.**
 
-Variable BRR (barrios donde se encuentran las unidades consumidoras):
-
-![Gráfico de barras de BRR](images/brr_bar_plot.png)
-
 Variable FAS_CON (códigos de referencia de fases de conexión):
 
 ![Gráfico de barras de FAS_CON](images/fas_con_bar_plot.png)
+
+Variable GRU_TAR (grupos tarifarios):
+
+![Gráfico de barras de GRU_TAR](images/gru_tar_bar_plot.png)
 
 Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
