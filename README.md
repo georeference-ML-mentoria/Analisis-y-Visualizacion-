@@ -45,19 +45,19 @@ Creo que GRUN_TEN y TEN_FORN no valen la pena, ya que todas las unidades pertene
 
 **Cuáles son los 3 valores más comunes de cada categoría?**
 
-| Variable | Valor más común              | Segundo valor más común             | Tercer valor más común       |
-| -------- | ---------------------------- | ----------------------------------- | ---------------------------- |
-| CONJ     | 15602 (42090 consumidores)   | 12737 (32909 consumidores)          | 12743 (28465 consumidores)   |
-| MUN      | 2802106 (30785 consumidores) | 2807402 (22570 consumidores)        | 2803005 (16067 consumidores) |
-| BRR      | CENTRO (20614 consumidores)  | TOBIAS BARRETO (10151 consumidores) | RIO REAL (9913 consumidores) |
-| CLAS_SUB | RE1 (99475 consumidores)     | RE2 (31682 consumidores)            | CO1 (6860 consumidores)      |
-| CNAE     | 0 (148046 consumidores)      | 6190601 (101 consumidores)          | 9491000 (57 consumidores)    |
-| FAS_CON  | AN (96082 consumidores)      | BN (21575 consumidores)             | CN (12284 consumidores)      |
-| GRU_TEN  | BT (148801 consumidores)     |                                     |                              |
-| TEN_FORN | 22 (148801 consumidores)     |                                     |                              |
-| GRU_TAR  | B1 (130596 consumidores)     | B3 (12297 consumidores)             | B2RU (5001 consumidores)     |
-| ARE_LOC  | UB (87973 consumidores)      | NU (60790 consumidores)             | 0 (38 consumidores)          |
-| SIT_ATIV | AT (145609 consumidores)     | DS (3192 consumidores)              |                              |
+| Variable | Valor más común                          | Segundo valor más común                        | Tercer valor más común                       |
+| -------- | ---------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
+| CONJ     | 15602 (42090 consumidores)               | 12737 (32909 consumidores)                     | 12743 (28465 consumidores)                   |
+| MUN      | 2802106 ("Estância", 30785 consumidores) | 2807402 ("Tobias Barreto", 22570 consumidores) | 2803005 ("Itabaianinha", 16067 consumidores) |
+| BRR      | CENTRO (20614 consumidores)              | TOBIAS BARRETO (10151 consumidores)            | RIO REAL (9913 consumidores)                 |
+| CLAS_SUB | RE1 (99475 consumidores)                 | RE2 (31682 consumidores)                       | CO1 (6860 consumidores)                      |
+| CNAE     | 0 (148046 consumidores)                  | 6190601 (101 consumidores)                     | 9491000 (57 consumidores)                    |
+| FAS_CON  | AN (96082 consumidores)                  | BN (21575 consumidores)                        | CN (12284 consumidores)                      |
+| GRU_TEN  | BT (148801 consumidores)                 |                                                |                                              |
+| TEN_FORN | 22 (148801 consumidores)                 |                                                |                                              |
+| GRU_TAR  | B1 (130596 consumidores)                 | B3 (12297 consumidores)                        | B2RU (5001 consumidores)                     |
+| ARE_LOC  | UB (87973 consumidores)                  | NU (60790 consumidores)                        | 0 (38 consumidores)                          |
+| SIT_ATIV | AT (145609 consumidores)                 | DS (3192 consumidores)                         |                                              |
 
 **Escoja dos variables y grafique sus niveles contra la cantidad de apariciones.**
 
