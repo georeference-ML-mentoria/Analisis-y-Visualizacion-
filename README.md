@@ -67,7 +67,7 @@ Variable BRR (barrios donde se encuentran las unidades consumidoras):
 
 Variable FAS_CON (códigos de referencia de fases de conexión):
 
-![Gráfico de torta de FAS_CON](images/fas_con_pie_chart.png)
+![Gráfico de barras de FAS_CON](images/fas_con_bar_plot.png)
 
 Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
