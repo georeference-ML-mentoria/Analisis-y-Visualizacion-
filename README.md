@@ -131,8 +131,28 @@ Como varia el servicio entre zonas urbanas y rurales? <br>
 
 Como varia el consumo entre zonas urbanas y rurales? <br>
 
-Javier <br>
-Cuales son 10 actividades economicas mas comunes de la region? <br>
-Dentro de ellas: <br>
-Cuales tienen mayor y menor frecuencia de corte <br>
-Cuales son las de mayor y menor consumo? <br>
+
+**Cuáles son las diez actividades económicas más comunes de la región?**
+
+Para más del 99% de los consumidores de este conjunto de datos (unidades consumidoras de baja tensión) no se registra actividad económica. Entre el resto -- una proporción muy pequeña -- estas son las diez actividades más comunes:
+
+* 101 consumidores son **proveedores de accesso a redes de comunicaciones** (código 6190-6/01).
+* 57 consumidores en **actividades de organizaciones religiosas** (código 9491-0/00).
+* 43 consumidores en el **área de construcción de edificios** (código 4120-4/00).
+* 38 consumidores en el **área de servicios de comunicación multimedia** (código 6110-8/03).
+* 37 consumidores en **actividades odontológicas** (código 8630-5/04).
+* 30 consumidores en **asociaciones de defensa de los derechos sociales** (código 9430-8/00).
+* 28 consumidores en **incorporación de emprendimientos inmobiliarios** (código 4110-7/00).
+* 27 consumidores en **captación, tratamiento y distribución de agua** (código 3600-6/01).
+* 23 consumidores en **administración pública en general** (código 8411-6/00).
+* 19 consumidores con **criaderos de ganado para faena** (código 0151-2/01).
+
+**Dentro de ellas:**
+
+**Cuáles tienen mayor y menor frecuencia de corte?**
+
+TODO
+
+**Cuáles son las de mayor y menor consumo?**
+
+TODO
