@@ -151,7 +151,8 @@ Para más del 99% de los consumidores de este conjunto de datos (unidades consum
 
 **Cuáles tienen mayor y menor frecuencia de corte?**
 
-TODO
+* La mayor frecuencia de corte la tiene, sin dudas, el **área de construcción de edificios** (código 4120-4/00) con el 86% de las unidades consumidoras reportando de 9 a 12 cortes (mensuales?).
+* La menor frecuencia de corte la tiene el área de **incorporación de emprendimientos inmobiliarios** (código 4110-7/00) con el 86% de las unidades consumidoras reportando 4 cortes (mensuales?) o menos.
 
 **Cuáles son las de mayor y menor consumo?**
 
