@@ -156,4 +156,5 @@ Para más del 99% de los consumidores de este conjunto de datos (unidades consum
 
 **Cuáles son las de mayor y menor consumo?**
 
-TODO
+* La actividad que más consume es el **área de construcción de edificios** (código 4120-4/00) con 251130 kWh anuales.
+* La actividad que menos consume es el área de **incorporación de emprendimientos inmobiliarios** (código 4110-7/00) con 13866 kWh anuales.
