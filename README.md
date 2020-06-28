@@ -25,11 +25,13 @@ Las variables poseen outliers. En este caso surgieron de la investigación surgi
 
 - El primer método es usar la función **Z-Score** que vincula la media y la desviación estándar removiendose aquellos valores que se encuentran fuera del rango de +/-3 desviaciones estandar de la medida
 - El segundo método que suele utilizarse es el de rango intercuantilico (IQR) en el que se calcula la distancia entre el cuantil 25 y el 75 (IQR = p.75-p25)para luego desechar aquellos valores que se encuentren por fuera del rango (p.25-1.5IQR,75+1.5IQR.
-Se hizo un análisis de cuál de las técnicas que mejor se adaptaba a las necesidades realizando una función donde se muestre el antes y el después los outliers. La técnica seleccionada fue la de **Rango intercuántilico** por lo que se procedió a usarla para eliminar aquellas realizaciones que fueran consideradas como outliers.
+Se hizo un análisis de cuál de las técnicas que mejor se adaptaba a las necesidades realizando una función donde se muestre el antes y el después los outliers. La técnica seleccionada fue la de **rango intercuántilico** por lo que se procedió a usarla para eliminar aquellas realizaciones que fueran consideradas como outliers.
 
 Como es la distribucion de los valores? Son normales? <br>
-
+Las distribuciones son asimétricas izquierda con kurtosis positiva con excepción de la variable FIC que es negativa. 
 Calcule los principales estadisticos despues del preprocesamiento. <br>
+
+
 Adicione los graficos o tablas que considere oportuno para graficar los puntos anteriores. <br>
 
 **Cuáles son las variables categóricas? Cuál es la cardinalidad de las mismas?**
