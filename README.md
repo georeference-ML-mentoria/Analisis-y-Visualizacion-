@@ -16,22 +16,10 @@ Cuales son las variables numericas? TABLA<br>
 
 Guillermo<br>
 Cuanto valen los principales estadisticos?<br>
-
 Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos? <br>
-Las variables numericas no poseen casos nulos pero si tienen incoherencias en el caso de las que corresponden al consumo ya que las mismas tienen valores negativos. En estos casos se procede a la eliminación de todas las observaciones que tengan valores negativos en los consumos en alguno de los meses.
 Poseen outliers? Que tecnicas se pueden utilizar para mitigar su impacto. <br>
-
-Las variables poseen outliers. En este caso surgieron de la investigación surgieron dos técnicas:
-
-- El primer método es usar la función **Z-Score** que vincula la media y la desviación estándar removiendose aquellos valores que se encuentran fuera del rango de +/-3 desviaciones estandar de la medida
-- El segundo método que suele utilizarse es el de rango intercuantilico (IQR) en el que se calcula la distancia entre el cuantil 25 y el 75 (IQR = p.75-p25)para luego desechar aquellos valores que se encuentren por fuera del rango (p.25-1.5IQR,75+1.5IQR.
-Se hizo un análisis de cuál de las técnicas que mejor se adaptaba a las necesidades realizando una función donde se muestre el antes y el después los outliers. La técnica seleccionada fue la de **rango intercuántilico** por lo que se procedió a usarla para eliminar aquellas realizaciones que fueran consideradas como outliers.
-
 Como es la distribucion de los valores? Son normales? <br>
-Las distribuciones son asimétricas izquierda con kurtosis positiva con excepción de la variable FIC que es negativa. 
 Calcule los principales estadisticos despues del preprocesamiento. <br>
-
-
 Adicione los graficos o tablas que considere oportuno para graficar los puntos anteriores. <br>
 
 **Cuáles son las variables categóricas? Cuál es la cardinalidad de las mismas?**
@@ -83,10 +71,11 @@ Variable GRU_TAR (grupos tarifarios):
 
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
-El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
-Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. En el caso de tener dos variables quatitativas podemos calcular el coeficiente de correlacion; e.g. x= 'CAR_INST', y ENE_01, ENE_02... ENE_12. Para identificar una correlacion entre una variable quantitativa (DIC) y una variable categorica usamos la ANOVA test or "the weighted variance of the mean of each category divided by the variance of all samples". Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables tiene correlacion.  
+Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. Eligimos "DIC" como salida porque vimos un poco mas correlacion con algunas variables. 
 
-Usamos DIC porque en general nos dio resultados como con salida con correlation mas grande.
+En el caso de tener dos variables numericas podemos calcular el Pearson's coeficiente de correlación o R. Para identificar una correlacion entre una variable numerica (DIC) y una variable categorica probamos la ANOVA que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC.  Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables no tiene correlacion. 
+
+Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular un numerico parecido al R. Segun a [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), la formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras".  
 
 ### Numeric con numeric: coeficiente de correlacion o "R"
 | entrada | salida| R|
@@ -97,7 +86,7 @@ Usamos DIC porque en general nos dio resultados como con salida con correlation 
 |x='ENE_03'|y='DIC'|-0.00591|
 |x='ENE_04'|y='DIC'|-0.00669|
 
-### Categorical con numeric (DIC): ANOVA statistic
+### Categorical con numeric (DIC): weighted variance
 | entrada | salida| correlation ratio|
 | -------- | -----|------------------|
 |x='CONJ'|y='DIC'|0.212|
@@ -105,15 +94,21 @@ Usamos DIC porque en general nos dio resultados como con salida con correlation 
 |x='GRU_TAR'|y="DIC"|0.101|
 |x='CNAE'|y='DIC'|0.038|
 
+Aplicando la formual de wieghted variance con las variables categoricas se encuentra correlacion.
 
 **Cual es la variable de mayor correlacion con la salida.** <br>
-Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
+Según a este experimento, "la área donde se ubica la unidad de consumo", ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico,CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla de frequencia (abajo) que muestra la frequencia de duracion de corte o DIC categorizado en low, medium y high condicional a que grupo tarifario o GRU_TAR esta el consumidor.  
 
+**Como podemos saber si las distribuciones condicionales son diferentes entre ellas?**
 
 ### Distribución condicional para DIC en GRU_TAR
+
+La tabla muestra la disribucion de low, med y high DIC (duración de corte) en porcentaje de categoria dado una cierta grupo tarifario, GRU_TAR.
+
+
 |    |**DIC** -  low|medium|high|
 |----|------|----|----|
 |**GRU_TAR**                     |
@@ -126,9 +121,11 @@ Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variabl
 
 Vemos que la duracion de corte esta mas o menos distribuido igualmente entre todos las grupos de tarifario.
 
+
 ## 3 - Preguntas <br>
 
-**Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
+**Calcule el consumo total anual de cada consumidor.** <br>
+
 Con un simple "for loop" se puede calcular el consumo total anual de cada consumidor.<br>
 ```
 annual_totals = []
@@ -142,9 +139,11 @@ for index, row in data.iterrows():
 print(annual_totals[:10])
 ```
 Despues podes agregar la lista ```annual_totals``` a tu dataset como una nueva columna ```data['consumo_anual'] = annual_totals```.<br>
-<br> Por ejemplo, el promedio de consumo por consumidor era ```data.consumo_anual.mean()= 1392.671```kWh, maximum ```data.consumo_anual.max()= 7825074.0```, y el desvio estandar ```data.consumo_anual.std()= 27441.344``` .<br>
-Existe correlacion entre consumo y frecuencia de corte de servicio (FIC)? <br>
-Segun a nuestros calculos, hay un valor R de -0.00696 entre el consumo anual y FIC.<br>
+
+* El promedio de consumo por consumidor era ```data.consumo_anual.mean()= 1392.671```kWh, 
+* maximum ```data.consumo_anual.max()= 7825074.0```
+* el desvio estandar ```data.consumo_anual.std()= 27441.344``` .<br>
+
 **Como varia el servicio entre zonas urbanas y rurales?** <br>
 Segun a este heatmap, la duración del corte es mas larga en zonas rurales que zonas urbanos. 
 ![heatmap of duracion of corte](images/heatmap_are_loc_dic.png "heatmap of duracion of corte")
