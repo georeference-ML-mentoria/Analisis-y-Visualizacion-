@@ -73,39 +73,43 @@ Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
 El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
-Usamos "correlation ratio", un valor entre 0 y 1 que nos da un idea la probabilidad de que un valor numerica puede estar predicho por su valor categorica. En general DIC nos dio resultados como con salida con correlation mas grande.
+Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. En el caso de tener dos variables quatitativas podemos calcular el coeficiente de correlacion; e.g. x= 'CAR_INST', y ENE_01, ENE_02... ENE_12. Para identificar una correlacion entre una variable quantitativa (DIC) y una variable categorica usamos la ANOVA test, que nos dio un frequencia o f-statistic y un p-valor del test de correlacion. Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables tiene correlacion.  
 
+Usamos DIC porque en general nos dio resultados como con salida con correlation mas grande.
 
-| entrada | salida| correlation ratio|
+### Numeric con numeric el coeficiente de correlacion o R
+| entrada | salida| R|
+| -------- | -----|--------|
+|x='CAR_INST'|y='DIC'|-0.00236|
+|x='ENE_01'|y='DIC'|-0.00526|
+|x='ENE_02'|y='DIC'|-0.00626|
+|x='ENE_03'|y='DIC'|-0.00591|
+|x='ENE_04'|y='DIC'|-0.00669|
+
+### Categorical con numeric (DIC) with ANOVA
+| entrada | salida| p-value|
 | -------- | -----|------------------|
 |x='CONJ'|y='DIC'|0.212|
 |x='ARE_LOC'|y="DIC"|0.427|
 |x='GRU_TAR'|y="DIC"|0.101|
 |x='CNAE'|y='DIC'|0.038|
-|x='CAR_INST'|y='DIC'|0.277|
-|x='ENE_01'|y='DIC'|0.15|
+
 
 **Cual es la variable de mayor correlacion con la salida.** <br>
 Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
-Eligimos la variable GRU_TAR (grupo tarifario) para comparar la distribucion en la dataset. 
+Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla abajoe que muestra la frequencia de  GRU_TAR para cada rango de variables DIC.  
 
+| GRU_TAR |low|medium|high|
+|----|------|----|----|
+| B1 | 26499|33601|35930|
+| B1BR| 146|205|246|
+| B2RU| 510|994|1333|
+| B2SP| 0|1|1|
+| B3| 2561|3442|2953|
 
-| GRU_TAR | Conditional Distribution|
-|----|------|
-| B1 | 0.878|
-| B3 | 0.083|
-| B1 | 0.034|
-| B1 | 0.006|
-| B1 | 0.000|
-| B1 | 0.000|
-
-
-![conditional distribution bar graph of rate groups](images/conditional_distribution.png "conditional distribution of rate groups")
-
-
-Vemos que la gran mayoria, 88 por ciento, esta en rate group B1.
+Vemos que la duracion de corte esta mas o menos distribuido igualment entre todos las grupos de tarifario.
 
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
 
@@ -126,8 +130,11 @@ print(annual_totals[:10])
 Despues podes agregar la lista ```annual_totals``` a tu dataset como una nueva columna ```data['consumo_anual'] = annual_totals```.<br>
 <br> Por ejemplo, el promedio de consumo por consumidor era ```data.consumo_anual.mean()= 1392.671```kWh, maximum ```data.consumo_anual.max()= 7825074.0```, y el desvio estandar ```data.consumo_anual.std()= 27441.344``` .<br>
 Existe correlacion entre consumo y frecuencia de corte de servicio (FIC)? <br>
-Segun a nuestros calculos, hay una correlation ratio de 0.235 entre consumo_anual y FIC.<br>
+Segun a nuestros calculos, hay un valor R de -0.00696 entre el consumo anual y FIC.<br>
 Como varia el servicio entre zonas urbanas y rurales? <br>
+Segun a este graphico, la duracion del corte es mas larga en zonas rurales que zonas urbanos. 
+![heatmap of duracion of corte](images/output.png "heatmap of duracion of corte")
+
 
 Como varia el consumo entre zonas urbanas y rurales? <br>
 
