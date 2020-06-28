@@ -98,7 +98,7 @@ Usamos DIC porque en general nos dio resultados como con salida con correlation 
 Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
-Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla abajoe que muestra la frequencia de  GRU_TAR para cada rango de variables DIC.  
+Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla de frequencia (abajo) que muestra la frequencia de duracion de corte o DIC categorizado en low, medium y high condicional a que grupo tarifario o GRU_TAR esta el consumidor.  
 
 | GRU_TAR |low|medium|high|
 |----|------|----|----|
@@ -108,7 +108,7 @@ Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variabl
 | B2SP| 0|1|1|
 | B3| 2561|3442|2953|
 
-Vemos que la duracion de corte esta mas o menos distribuido igualment entre todos las grupos de tarifario.
+Vemos que la duracion de corte esta mas o menos distribuido igualmente entre todos las grupos de tarifario.
 
 ## 3 - Preguntas <br>
 
