@@ -69,7 +69,6 @@ Variable GRU_TAR (grupos tarifarios):
 
 ![Gráfico de barras de GRU_TAR](images/gru_tar_bar_plot.png)
 
-Brandon <br>
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
 El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
@@ -111,10 +110,9 @@ Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variabl
 
 Vemos que la duracion de corte esta mas o menos distribuido igualment entre todos las grupos de tarifario.
 
+## 3 - Preguntas <br>
+
 **Como podemos saber si las distribuciones condicionales son diferentes entre ellas?** <br>
-
-3 - Preguntas <br>
-
 Con un simple "for loop" se puede calcular el consumo total anual de cada consumidor.<br>
 ```
 annual_totals = []
@@ -131,13 +129,14 @@ Despues podes agregar la lista ```annual_totals``` a tu dataset como una nueva c
 <br> Por ejemplo, el promedio de consumo por consumidor era ```data.consumo_anual.mean()= 1392.671```kWh, maximum ```data.consumo_anual.max()= 7825074.0```, y el desvio estandar ```data.consumo_anual.std()= 27441.344``` .<br>
 Existe correlacion entre consumo y frecuencia de corte de servicio (FIC)? <br>
 Segun a nuestros calculos, hay un valor R de -0.00696 entre el consumo anual y FIC.<br>
-Como varia el servicio entre zonas urbanas y rurales? <br>
-Segun a este graphico, la duracion del corte es mas larga en zonas rurales que zonas urbanos. 
-![heatmap of duracion of corte](images/output.png "heatmap of duracion of corte")
+**Como varia el servicio entre zonas urbanas y rurales?** <br>
+Segun a este heatmap, la duración del corte es mas larga en zonas rurales que zonas urbanos. 
+![heatmap of duracion of corte](images/heatmap_are_loc_dic.png "heatmap of duracion of corte")
 
 
-Como varia el consumo entre zonas urbanas y rurales? <br>
-
+**Como varia el consumo entre zonas urbanas y rurales?** <br>
+Segun a este heatmap, el consumo anual es mas larga en zonas rurales que zonas urbanos.
+![heatmap of consumo anual](images/heatmap_are_loc_consumo.png "heatmap of consumo anual")
 
 **Cuáles son las diez actividades económicas más comunes de la región?**
 
