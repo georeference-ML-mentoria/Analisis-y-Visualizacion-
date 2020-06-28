@@ -72,7 +72,7 @@ Variable GRU_TAR (grupos tarifarios):
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
 El primer paso en establicer un relacion predictivo es identificar correlacion entre variables, definiendo nuestros variables independientes (x) y dependientes (y). 
-Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. En el caso de tener dos variables quatitativas podemos calcular el coeficiente de correlacion; e.g. x= 'CAR_INST', y ENE_01, ENE_02... ENE_12. Para identificar una correlacion entre una variable quantitativa (DIC) y una variable categorica usamos la ANOVA test, que nos dio un frequencia o f-statistic y un p-valor del test de correlacion. Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables tiene correlacion.  
+Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. En el caso de tener dos variables quatitativas podemos calcular el coeficiente de correlacion; e.g. x= 'CAR_INST', y ENE_01, ENE_02... ENE_12. Para identificar una correlacion entre una variable quantitativa (DIC) y una variable categorica usamos la ANOVA test or "the weighted variance of the mean of each category divided by the variance of all samples". Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables tiene correlacion.  
 
 Usamos DIC porque en general nos dio resultados como con salida con correlation mas grande.
 
@@ -100,13 +100,17 @@ Segun a este experimento, la área donde se ubica la unidad de consumo, ARE_LOC,
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla de frequencia (abajo) que muestra la frequencia de duracion de corte o DIC categorizado en low, medium y high condicional a que grupo tarifario o GRU_TAR esta el consumidor.  
 
-| GRU_TAR |low|medium|high|
+
+### Distribución condicional para DIC en GRU_TAR
+|    |**DIC** -  low|medium|high|
 |----|------|----|----|
-| B1 | 26499|33601|35930|
-| B1BR| 146|205|246|
-| B2RU| 510|994|1333|
-| B2SP| 0|1|1|
-| B3| 2561|3442|2953|
+|**GRU_TAR**                     |
+|B1 | 0.28|0.35|0.37|
+| B1BR| 0.24|0.34|0.41|
+| B2RU| 0.18|0.35|0.47|
+| B2SP| 0|0.5|0.5|
+| B3|0.29|0.38|0.33|
+
 
 Vemos que la duracion de corte esta mas o menos distribuido igualmente entre todos las grupos de tarifario.
 
