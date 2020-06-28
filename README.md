@@ -16,9 +16,19 @@ Cuales son las variables numericas? TABLA<br>
 
 Guillermo<br>
 Cuanto valen los principales estadisticos?<br>
+
 Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos? <br>
+Las variables numericas no poseen casos nulos pero si tienen incoherencias en la métrica de las que corresponden al consumo ya que las mismas tienen valores negativos lo cual es imposible dado el tipo de variable. En estos casos se poseen a la eliminación de todoas observaciones que tengan valores negativos en los consumos en alguno de los meses.
 Poseen outliers? Que tecnicas se pueden utilizar para mitigar su impacto. <br>
+
+Las variables poseen outliers. En este caso surgieron de la investigación surgieron dos técnicas:
+
+- El primer método es usar la función **Z-Score** que vincula la media y la desviación estándar removiendose aquellos valores que se encuentran fuera del rango de +/-3 desviaciones estandar de la medida
+- El segundo método que suele utilizarse es el de rango intercuantilico (IQR) en el que se calcula la distancia entre el cuantil 25 y el 75 (IQR = p.75-p25)para luego desechar aquellos valores que se encuentren por fuera del rango (p.25-1.5IQR,75+1.5IQR.
+Se hizo un análisis de cuál de las técnicas que mejor se adaptaba a las necesidades realizando una función donde se muestre el antes y el después los outliers. La técnica seleccionada fue la de **Rango intercuántilico** por lo que se procedió a usarla para eliminar aquellas realizaciones que fueran consideradas como outliers.
+
 Como es la distribucion de los valores? Son normales? <br>
+
 Calcule los principales estadisticos despues del preprocesamiento. <br>
 Adicione los graficos o tablas que considere oportuno para graficar los puntos anteriores. <br>
 
