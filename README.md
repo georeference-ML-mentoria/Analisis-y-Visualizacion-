@@ -76,7 +76,7 @@ Buscamos un "correlation" test para cada variable con "DIC", una variable quanti
 
 Usamos DIC porque en general nos dio resultados como con salida con correlation mas grande.
 
-### Numeric con numeric el coeficiente de correlacion o R
+### Numeric con numeric: coeficiente de correlacion o "R"
 | entrada | salida| R|
 | -------- | -----|--------|
 |x='CAR_INST'|y='DIC'|-0.00236|
@@ -85,8 +85,8 @@ Usamos DIC porque en general nos dio resultados como con salida con correlation 
 |x='ENE_03'|y='DIC'|-0.00591|
 |x='ENE_04'|y='DIC'|-0.00669|
 
-### Categorical con numeric (DIC) with ANOVA
-| entrada | salida| p-value|
+### Categorical con numeric (DIC): ANOVA statistic
+| entrada | salida| correlation ratio|
 | -------- | -----|------------------|
 |x='CONJ'|y='DIC'|0.212|
 |x='ARE_LOC'|y="DIC"|0.427|
