@@ -18,7 +18,7 @@ Guillermo<br>
 Cuanto valen los principales estadisticos?<br>
 
 Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos? <br>
-Las variables numericas no poseen casos nulos pero si tienen incoherencias en la métrica de las que corresponden al consumo ya que las mismas tienen valores negativos lo cual es imposible dado el tipo de variable. En estos casos se poseen a la eliminación de todoas observaciones que tengan valores negativos en los consumos en alguno de los meses.
+Las variables numericas no poseen casos nulos pero si tienen incoherencias en el caso de las que corresponden al consumo ya que las mismas tienen valores negativos. En estos casos se procede a la eliminación de todas las observaciones que tengan valores negativos en los consumos en alguno de los meses.
 Poseen outliers? Que tecnicas se pueden utilizar para mitigar su impacto. <br>
 
 Las variables poseen outliers. En este caso surgieron de la investigación surgieron dos técnicas:
