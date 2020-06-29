@@ -71,11 +71,11 @@ Variable GRU_TAR (grupos tarifarios):
 
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
-Buscamos un "correlation" test para cada variable con "DIC", una variable quantitativa. Eligimos "DIC" como salida porque vimos un poco mas correlacion con algunas variables. 
+Buscamos un test de correlación entre la variable con **DIC** (numerica) como salida, y cada una de las otras variables. Eligimos "DIC" como salida porque vimos un poco mas correlación con algunas variables de su correlación con "FIC". 
 
-En el caso de tener dos variables numericas podemos calcular el Pearson's coeficiente de correlación o R. Para identificar una correlacion entre una variable numerica (DIC) y una variable categorica probamos la ANOVA que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC.  Un p-valor de zero significa que no podemos rechazar el hipothesis de que los variables no tiene correlacion. 
+En el caso de tener dos variables numericas podemos calcular coeficiente de correlación de el Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la ANOVA que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC. Un p-valor de zero nos indica que hay correlacion entre las variables. 
 
-Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular un numerico parecido al R. Segun a [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), la formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras".  
+Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**.  
 
 ### Numeric con numeric: coeficiente de correlacion o "R"
 | entrada | salida| R|
@@ -94,7 +94,7 @@ Como alternativa encontramos una formación de la formula del coeficiente de cor
 |x='GRU_TAR'|y="DIC"|0.101|
 |x='CNAE'|y='DIC'|0.038|
 
-Aplicando la formual de wieghted variance con las variables categoricas se encuentra correlacion.
+Aplicando la formual de wieghted variance con las variables categoricas se encuentra correlacion en las variables arriba.
 
 **Cual es la variable de mayor correlacion con la salida.** <br>
 Según a este experimento, "la área donde se ubica la unidad de consumo", ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico,CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
@@ -106,7 +106,7 @@ Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variabl
 
 ### Distribución condicional para DIC en GRU_TAR
 
-La tabla muestra la disribucion de low, med y high DIC (duración de corte) en porcentaje de categoria dado una cierta grupo tarifario, GRU_TAR.
+La tabla muestra la disribución de low, med y high DIC (duración de corte) en porcentaje de categoria dado una cierta grupo tarifario, GRU_TAR.
 
 
 |    |**DIC** -  low|medium|high|
@@ -119,7 +119,7 @@ La tabla muestra la disribucion de low, med y high DIC (duración de corte) en p
 | B3|0.29|0.38|0.33|
 
 
-Vemos que la duracion de corte esta mas o menos distribuido igualmente entre todos las grupos de tarifario.
+Vemos que la duración de corte **DIC** esta mas o menos distribuido igualmente entre todos las grupos de tarifario **GRU_TAR**.
 
 
 ## 3 - Preguntas <br>
