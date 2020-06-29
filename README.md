@@ -73,7 +73,7 @@ Variable GRU_TAR (grupos tarifarios):
 
 Buscamos un test de correlación entre la variable con **DIC** (numerica) como salida, y cada una de las otras variables. Eligimos "DIC" como salida porque vimos un poco mas correlación con algunas variables de su correlación con "FIC". 
 
-En el caso de tener dos variables numericas podemos calcular coeficiente de correlación de el Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la ANOVA que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC. Un p-valor de zero nos indica que hay correlacion entre las variables. 
+En el caso de tener dos variables numericas podemos calcular coeficiente de correlación de el Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. 
 
 Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**.  
 
