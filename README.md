@@ -5,7 +5,7 @@ Analisis de calidad de suministro electrico
 **Cuantas entradas posee el dataset y que representa cada una?** <br>
 El conjunto de datos original tenía 40 entradas. Se las tradujo al español para saber en que consistían cada una de ellas. De estas se eligieron 28
 
-![Diseño de registro](images/diseno_deregistro.png "Diseño de registro")
+![Diseño de registro](images/diseno_de_registro.png "Diseño de registro")
 
 **Si queremos analizar calidad de servicio cual seria a su parece la variable de salida?
 FIC o DIC?**<br>
@@ -29,7 +29,7 @@ La función Z-Score que vincula la media y la desviación estándar removiéndos
 El **rango intercuantilico** (IQR) se calcula en primer lugar la distancia entre los cuantiles c.25 y c.75 (IQR = c.75- c.25) para luego desechar aquellos valores que se encuentren por fuera del rango (c.25-1.5*QR, c.75+1.5*IQR)
 Se hizo una función que nos permitiera visibilizar cual de las técnicas se adaptaba a nuestras necesidades donde se encuentran los gráficos de caja y distribución para la variable original, la variable filtrada a través del método Z-Score y el método IQR. En todos los casos se arribó a la misma conclusión en la que él método de eliminación de outiliers que mejor se adaptaba a nuestras necesidades era IQR.
 
-![metodos de filtrado outliers](images/ejemplo_de_aplicación_de_outliers.png "metodos de filtrado outliers")
+![metodos de filtrado outliers](images/ejemplo_de_aplicacion_de_outliers.png "metodos de filtrado outliers")
 
 Una vez que se seleccionó el método IQR se procedió a eliminar todas las observaciones que tuvieran outliers en alguna de las variables numéricas. 
 
@@ -37,7 +37,7 @@ Una vez que se seleccionó el método IQR se procedió a eliminar todas las obse
 Para observar la distribución se procedió a usar las medidas de Curtosis y Asimetría. Todas las variables resultaron tener asimetría positiva. Al mismo tiempo respecto de la curtosis, FIC fue la única que asumió valor negativo (distribución levemente platicúrtica) mientras que el resto de las variables numéricas resultaron tener curtosis levemente positiva. 
 Para probar la hipótesis de normalidad se recurrió al test de Kolgomorov-Smirnov en el que la hipótesis nula supone “Normalidad de la distribución”. En todos los casos las variables aceptaron la hipótesis nula con un alfa de 5%.
 
-![Test de normalidad](images/test_kolgomorov-smirnov.png "Test de normalidad")
+![Test de normalidad](images/test_kolgomorov_smirnov.png "Test de normalidad")
 
 **Cuáles son las variables categóricas? Cuál es la cardinalidad de las mismas?**
 
