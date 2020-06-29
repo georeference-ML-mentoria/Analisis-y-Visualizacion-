@@ -3,10 +3,9 @@ Analisis de calidad de suministro electrico
 
 1 - Analisis General¶
 Cuantas entradas posee el dataset y que representa cada una? <br>
-40 (original), 28 (eligidos),  <br>
-Glossary: (Guillermo) TABLA <br>
+El conjunto de datos original tenía 40 entradas. Se las tradujo al español para saber en que consistían cada una de ellas. De estas se eligieron 28
 
-nombre | traduccion | descripcion | numerica/categorica
+![Diseño de registro](images/Diseño de registro.png)
 
 Si queremos analizar calidad de servicio cual seria a su parece la variable de salida?
 FIC o DIC?<br>
@@ -73,7 +72,7 @@ Variable GRU_TAR (grupos tarifarios):
 
 Buscamos un test de correlación entre la variable **DIC** (numerica) como salida con cada una de las otras variables como entradas. Eligimos duración de corte "DIC" como salida porque vimos un poco más correlación que encontramos usando frequencia de corte "FIC" como salida. 
 
-Para identificar una correlación entre dos variables numericas podemos calcular la coeficiente de correlación de Pearson, **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos con las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. Pero esos resultados nos pareció raros, y no nos ayuda en identificar el grado de la correlacion entre cada variable y DIC para poder compararlas. 
+Para identificar una correlación entre dos variables numericas podemos calcular la coeficiente de correlación de Pearson, **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos con las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. Pero esos resultados nos pareció raros. 
 
 Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**. Con estos resultados podemos ver cual variable categorica tiene correlación mas fuerte con DIC que es la zona rural o urbano **ARE_LOC**.  
 
