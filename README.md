@@ -1,5 +1,10 @@
 # Analisis-y-Visualizacion-
-Analisis de calidad de suministro electrico
+#### Analisis de calidad de suministro electrico
+
+## Aplicacion de ML sobre datos georeferenciados
+#### Mentoria: Diplomatura Ciencias de Datos, FAMAF, 2020
+
+Practico del grupo **Javier Gallo**, **Guillermo Coseani** y **Brandon Janes**.
 
 ## 1 - Analisis General¶
 **Cuantas entradas posee el dataset y que representa cada una?** <br>
