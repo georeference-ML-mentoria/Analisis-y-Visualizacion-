@@ -5,7 +5,7 @@ Analisis de calidad de suministro electrico
 **Cuantas entradas posee el dataset y que representa cada una?** <br>
 El conjunto de datos original tenía 40 entradas. Se las tradujo al español para saber en que consistían cada una de ellas. De estas se eligieron 28
 
-![Diseño de registro](images/diseño_deregistro.png "Diseño de registro")
+![Diseño de registro](images/diseno_deregistro.png "Diseño de registro")
 
 **Si queremos analizar calidad de servicio cual seria a su parece la variable de salida?
 FIC o DIC?**<br>
@@ -16,7 +16,8 @@ Cuales son las variables numericas? <br>
 
 **Cuanto valen los principales estadisticos?**
 Se procedió a calcular los principales estadísticos a través del método describe( ) entre los que se incluyó las medidas: media, min, max, desviación estándar y los percentiles (5,50,95).
-Imágenes(descriptivos_sin_procesar.png)
+
+![Descriptivos de la dataset](images/descriptivos_sin_procesar.png "Descriptivos de la dataset")
 
 **Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos?**
 Las variables numéricas no tienen datos perdidos, pero si inválidos en el caso de consumo ya que las variables solamente pueden adoptar valores positivos mientras que en el conjunto de datos se observan que hay observaciones que poseen valores negativos en alguno de los consumos. Para ello se procedió a usar una mascara en la que se eliminen todas aquellas observaciones que tengan al menos un consumo negativo durante el mes.
