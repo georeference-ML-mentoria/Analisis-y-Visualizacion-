@@ -71,7 +71,7 @@ Variable GRU_TAR (grupos tarifarios):
 
 **Cuando sea posible calcule la correlacion entre cada variable y la salida, y entre variables.** <br>
 
-Buscamos un test de correlación entre la variable con **DIC** (numerica) como salida, y cada una de las otras variables. Eligimos "DIC" como salida porque vimos un poco mas correlación con algunas variables de su correlación con "FIC". 
+Buscamos un test de correlación entre la variable **DIC** (numerica) como salida, y cada una de las otras variables como entrada. Eligimos duración de corte "DIC" como salida porque vimos un poco más correlación entre las variables que encontramos usando frequencia de corte "FIC" como salida. 
 
 En el caso de tener dos variables numericas podemos calcular coeficiente de correlación de el Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. 
 
