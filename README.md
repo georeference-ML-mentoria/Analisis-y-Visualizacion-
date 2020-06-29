@@ -1,25 +1,42 @@
 # Analisis-y-Visualizacion-
 Analisis de calidad de suministro electrico
 
-1 - Analisis General¶
-Cuantas entradas posee el dataset y que representa cada una? <br>
+## 1 - Analisis General¶
+**Cuantas entradas posee el dataset y que representa cada una?** <br>
 El conjunto de datos original tenía 40 entradas. Se las tradujo al español para saber en que consistían cada una de ellas. De estas se eligieron 28
 
-![Diseño de registro](images/Diseño de registro.png)
+![Diseño de registro](images/diseño_deregistro.png "Diseño de registro")
 
-Si queremos analizar calidad de servicio cual seria a su parece la variable de salida?
-FIC o DIC?<br>
+**Si queremos analizar calidad de servicio cual seria a su parece la variable de salida?
+FIC o DIC?**<br>
+Eligimos duración de corte "DIC" como salida porque vimos un poco más correlación que encontramos usando frequencia de corte "FIC" como salida. 
 
-2 - Analisis Estadistico <br>
-Cuales son las variables numericas? TABLA<br>
+## 2 - Analisis Estadistico <br>
+Cuales son las variables numericas? <br>
 
-Guillermo<br>
-Cuanto valen los principales estadisticos?<br>
-Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos? <br>
-Poseen outliers? Que tecnicas se pueden utilizar para mitigar su impacto. <br>
-Como es la distribucion de los valores? Son normales? <br>
-Calcule los principales estadisticos despues del preprocesamiento. <br>
-Adicione los graficos o tablas que considere oportuno para graficar los puntos anteriores. <br>
+**Cuanto valen los principales estadisticos?**
+Se procedió a calcular los principales estadísticos a través del método describe( ) entre los que se incluyó las medidas: media, min, max, desviación estándar y los percentiles (5,50,95).
+Imágenes(descriptivos_sin_procesar.png)
+
+**Existen valores que no sean validos? Cuales? Que se puede hacer en esos casos?**
+Las variables numéricas no tienen datos perdidos, pero si inválidos en el caso de consumo ya que las variables solamente pueden adoptar valores positivos mientras que en el conjunto de datos se observan que hay observaciones que poseen valores negativos en alguno de los consumos. Para ello se procedió a usar una mascara en la que se eliminen todas aquellas observaciones que tengan al menos un consumo negativo durante el mes.
+
+**Poseen outliers? Que tecnicas se pueden utilizar para mitigar su impacto.** 
+Las variables numéricas poseen **outliers**. Para eliminarlo surgen dos técnicas tradicionales: **Z-Score** y el rango intercuantilico (IQR).
+La función Z-Score que vincula la media y la desviación estándar removiéndose aquellos valores que se encuentran fuera del rango de +/-3 desviaciones estándar de la media.
+
+El **rango intercuantilico** (IQR) se calcula en primer lugar la distancia entre los cuantiles c.25 y c.75 (IQR = c.75- c.25) para luego desechar aquellos valores que se encuentren por fuera del rango (c.25-1.5*QR, c.75+1.5*IQR)
+Se hizo una función que nos permitiera visibilizar cual de las técnicas se adaptaba a nuestras necesidades donde se encuentran los gráficos de caja y distribución para la variable original, la variable filtrada a través del método Z-Score y el método IQR. En todos los casos se arribó a la misma conclusión en la que él método de eliminación de outiliers que mejor se adaptaba a nuestras necesidades era IQR.
+
+![metodos de filtrado outliers](images/ejemplo_de_aplicación_de_outliers.png "metodos de filtrado outliers")
+
+Una vez que se seleccionó el método IQR se procedió a eliminar todas las observaciones que tuvieran outliers en alguna de las variables numéricas. 
+
+**Como es la distribucion de los valores? Son normales?**
+Para observar la distribución se procedió a usar las medidas de Curtosis y Asimetría. Todas las variables resultaron tener asimetría positiva. Al mismo tiempo respecto de la curtosis, FIC fue la única que asumió valor negativo (distribución levemente platicúrtica) mientras que el resto de las variables numéricas resultaron tener curtosis levemente positiva. 
+Para probar la hipótesis de normalidad se recurrió al test de Kolgomorov-Smirnov en el que la hipótesis nula supone “Normalidad de la distribución”. En todos los casos las variables aceptaron la hipótesis nula con un alfa de 5%.
+
+![Test de normalidad](images/test_kolgomorov-smirnov.png "Test de normalidad")
 
 **Cuáles son las variables categóricas? Cuál es la cardinalidad de las mismas?**
 
