@@ -73,9 +73,9 @@ Variable GRU_TAR (grupos tarifarios):
 
 Buscamos un test de correlación entre la variable **DIC** (numerica) como salida con cada una de las otras variables como entradas. Eligimos duración de corte "DIC" como salida porque vimos un poco más correlación que encontramos usando frequencia de corte "FIC" como salida. 
 
-En el caso de tener dos variables numericas podemos calcular coeficiente de correlación de el Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos entre las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. 
+Para identificar una correlación entre dos variables numericas podemos calcular la coeficiente de correlación de Pearson o **r**. Para identificar una correlación entre una variable numerica (DIC) y una variable categorica en principio probamos la one-way ANOVA test que nos dió un p-valor de cero para cada test que hicimos con las variables categoricas y DIC. El p-valor de cero significa que existe un riesgo del 0 por ciento de concluir que las variables estan correlacionados con **DIC** cuando no estan correlacionados con **DIC**. Pero esos resultados nos pareció raros. 
 
-Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**.  
+Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**. Con estos resultados podemos ver cual variable categorica tiene correlación mas fuerte con DIC que es la zona rural o urbano **ARE_LOC**.  
 
 ### Numeric con numeric: coeficiente de correlacion o "R"
 | entrada | salida| R|
@@ -94,10 +94,8 @@ Como alternativa encontramos una formación de la formula del coeficiente de cor
 |x='GRU_TAR'|y="DIC"|0.101|
 |x='CNAE'|y='DIC'|0.038|
 
-Aplicando la formual de wieghted variance con las variables categoricas se encuentra correlacion en las variables arriba.
-
 **Cual es la variable de mayor correlacion con la salida.** <br>
-Según a este experimento, "la área donde se ubica la unidad de consumo", ARE_LOC, tiene mayor correlacion con DIC. Tambien notable son las correlacciones de activadad economico,CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
+Según a este experimento, "la área donde se ubica la unidad de consumo", ARE_LOC, tiene mayor correlacion con DIC. También notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
 
 **Escoja una variable categorica y calcule las distribuciones condicionales para cada nivel de la misma.** <br>
 Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variable DIC en tres categorias low, medium y high, para generar la tabla de frequencia (abajo) que muestra la frequencia de duracion de corte o DIC categorizado en low, medium y high condicional a que grupo tarifario o GRU_TAR esta el consumidor.  
