@@ -8,6 +8,7 @@ Practico del grupo **Javier Gallo**, **Guillermo Coseani** y **Brandon Janes**.
 
 ## 1 - Analisis General¶
 **Cuantas entradas posee el dataset y que representa cada una?** <br>
+**Cuales son las variables numericas?** <br>
 El conjunto de datos original tenía 40 entradas. Se las tradujo al español para saber en que consistían cada una de ellas. De estas se eligieron 28
 
 ![Diseño de registro](images/diseno_de_registro.png "Diseño de registro")
@@ -17,7 +18,6 @@ FIC o DIC?**<br>
 Eligimos duración de corte "DIC" como salida porque vimos un poco más correlación que encontramos usando frequencia de corte "FIC" como salida. 
 
 ## 2 - Analisis Estadistico <br>
-Cuales son las variables numericas? <br>
 
 **Cuanto valen los principales estadisticos?**
 Se procedió a calcular los principales estadísticos a través del método describe( ) entre los que se incluyó las medidas: media, min, max, desviación estándar y los percentiles (5,50,95).
