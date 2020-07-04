@@ -124,10 +124,11 @@ La tabla muestra la disribución de low, med y high DIC (duración de corte) en 
 **P(un cliente en GRU_TAR B1 ∣ tiene medium duracion de corte)**
 total = 109,463<br>
 P(B1) = 96030/109463 = 0.877<br>
-P(medium) = (38254/109463) = 0.3494<br>
-P(B1|medium) = 33601/109463) y las variables estan independientes.<br>
+P(medium) = (38254/109463) = 0.349<br>
+P(B1|medium) = 33601/109463) = 0.306<br>
+Las variables estan independientes. <br>
 
-Probabilidad que un cliente en GRU_TAR B1 tiene medium duracion de corte: 0.306<br>
+La probabilidad que un cliente en **GRU_TAR B1** tiene **medium duracion de corte DIC**: ```0.306```<br>
 
 ## 3 - Preguntas <br>
 
