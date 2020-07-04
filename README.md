@@ -121,8 +121,9 @@ La tabla muestra la disribución de low, med y high DIC (duración de corte) en 
 
 ![conditional probability of GRU_TAR and DIC](images/condprob_cross.png "conditional probability of GRU_TAR and DIC")
 
-**P(un cliente en GRU_TAR B1 ∣ tiene medium duracion de corte)**
-total = 109,463<br>
+### P(un cliente en GRU_TAR B1 ∣ tiene medium duracion de corte)
+<br>
+total de registros = 109,463<br>
 P(B1) = 96030/109463 = 0.877<br>
 P(medium) = (38254/109463) = 0.349<br>
 P(B1|medium) = 33601/109463) = 0.306<br>
