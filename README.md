@@ -100,21 +100,12 @@ Para identificar una correlación entre dos variables numericas podemos calcular
 Como alternativa encontramos una formación de la formula del coeficiente de correlación modificado para poder calcular una variable categórica parecido al R. Segun a un articulo [Shaked Zychlinski](https://towardsdatascience.com/the-search-for-categorical-correlation-a1cf7f1888c9), su formula calcula "la varianza ponderada de la media de cada categoría dividida por la varianza de todas las muestras", que similar de **r**. Con estos resultados podemos ver cual variable categorica tiene correlación mas fuerte con DIC que es la zona rural o urbano **ARE_LOC**.  
 
 ### Numeric con numeric: coeficiente de correlacion o "R"
-| entrada | salida| R|
-| -------- | -----|--------|
-|x='CAR_INST'|y='DIC'|-0.00236|
-|x='ENE_01'|y='DIC'|-0.00526|
-|x='ENE_02'|y='DIC'|-0.00626|
-|x='ENE_03'|y='DIC'|-0.00591|
-|x='ENE_04'|y='DIC'|-0.00669|
+
+![correlaciton of numeric values and DIC](images/quan_dic.png "correlaciton of numeric values and DIC")
 
 ### Categorical con numeric (DIC): weighted variance
-| entrada | salida| correlation ratio|
-| -------- | -----|------------------|
-|x='CONJ'|y='DIC'|0.212|
-|x='ARE_LOC'|y="DIC"|0.427|
-|x='GRU_TAR'|y="DIC"|0.101|
-|x='CNAE'|y='DIC'|0.038|
+
+![correlaciton of categorical values and DIC](images/qual_dic.png "correlaciton of categorical values and DIC")
 
 **Cual es la variable de mayor correlacion con la salida.** <br>
 Según a este experimento, "la área donde se ubica la unidad de consumo", ARE_LOC, tiene mayor correlacion con DIC. También notable son las correlacciones de activadad economico, CNAE, y departemento donde esta ubicado el consumido, CONJ, con DIC. 
@@ -128,19 +119,15 @@ Eligimos la variable GRU_TAR (grupo tarifario). Primero categorizamos la variabl
 
 La tabla muestra la disribución de low, med y high DIC (duración de corte) en porcentaje de categoria dado una cierta grupo tarifario, GRU_TAR.
 
+![conditional probability of GRU_TAR and DIC](images/condprob_cross.png "conditional probability of GRU_TAR and DIC")
 
-|    |**DIC** -  low|medium|high|
-|----|------|----|----|
-|**GRU_TAR**                     |
-|B1 | 0.28|0.35|0.37|
-| B1BR| 0.24|0.34|0.41|
-| B2RU| 0.18|0.35|0.47|
-| B2SP| 0|0.5|0.5|
-| B3|0.29|0.38|0.33|
+**P(un cliente en GRU_TAR B1 ∣ tiene medium duracion de corte)**
+total = 109,463<br>
+P(B1) = 96030/109463 = 0.877<br>
+P(medium) = (38254/109463) = 0.3494<br>
+P(B1|medium) = 33601/109463) y las variables estan independientes.<br>
 
-
-Vemos que la duración de corte **DIC** esta mas o menos distribuido igualmente entre todos las grupos de tarifario **GRU_TAR**.
-
+Probabilidad que un cliente en GRU_TAR B1 tiene medium duracion de corte: 0.306<br>
 
 ## 3 - Preguntas <br>
 
@@ -166,8 +153,7 @@ Despues podes agregar la lista ```annual_totals``` a tu dataset como una nueva c
 
 **Como varia el servicio entre zonas urbanas y rurales?** <br>
 Segun a este heatmap, la duración del corte es mas larga en zonas rurales que zonas urbanos. 
-![heatmap of duracion of corte](images/heatmap_are_loc_dic.png "heatmap of duracion of corte")
-
+![distribution of DIC rural and urban](images/DIC_distribution.png "distribution of DIC rural and urban")
 
 **Como varia el consumo entre zonas urbanas y rurales?** <br>
 Segun a este heatmap, el consumo anual es mas larga en zonas rurales que zonas urbanos.
